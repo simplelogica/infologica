@@ -1,0 +1,21 @@
+{
+  "name": "infologica",
+  "version": "0.0.1",
+  "homepage": "https://github.com/simplelogica/infologica",
+  "authors": [],
+  "description": "Web based network information panel for information radiators.",
+  "main": "",
+  "license": "GPLv2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
+  }
+}

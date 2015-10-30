@@ -1,0 +1,37 @@
+{
+  "name": "infologica",
+  "version": "0.0.1",
+  "description": "Web based network information panel for information radiators.",
+  "main": "server/app.js",
+  "dependencies": {
+    "body-parser": "^1.5.1",
+    "compression": "^1.6.0",
+    "express": "^4.7.1",
+    "lodash": "^3.10.1",
+    "method-override": "^2.1.2",
+    "mongoose": "~4.1.11",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7",
+    "require-all": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplelogica/infologica.git"
+  },
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/simplelogica/infologica/issues"
+  },
+  "homepage": "https://github.com/simplelogica/infologica#readme",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "event-stream": "^3.3.2",
+    "gulp": "^3.9.0",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.2",
+    "main-bower-files": "^2.9.0"
+  }
+}

@@ -1,0 +1,5 @@
+@import '../../client/components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+.navbar + .container {
+  margin-top: 60px;
+}
