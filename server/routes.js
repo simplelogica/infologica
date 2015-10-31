@@ -13,19 +13,4 @@
 module.exports = function(app) {
   var express = require("express"),
       controllers = app.get('controllers');
-
-  // User-related routes
-  var usersRouter = express.Router();
-
-  usersRouter.route('/users')
-    .get(controllers.users.findAllUsers)
-    .post(controllers.users.addUser);
-
-  usersRouter.route('/user/:id')
-    .get(controllers.users.findById)
-    .put(controllers.users.updateUser)
-    .delete(controllers.users.deleteUser);
-
-  // Attach the router
-  app.use('/api', usersRouter);
 };
