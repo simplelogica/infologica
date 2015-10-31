@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/simplelogica/infologica.git"
   },
-  "license": "GPLv2",
+  "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/simplelogica/infologica/issues"
   },
