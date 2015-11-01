@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose'),
     Schema   = mongoose.Schema,
-    timeStampsPlugin = require('./plugins/timeStamps');
+    timeStampsPlugin = require('./plugins/time_stamps');
 
 /*
   Define the schema.

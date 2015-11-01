@@ -11,6 +11,7 @@
     "method-override": "^2.1.2",
     "mongoose": "~4.1.11",
     "morgan": "^1.6.1",
+    "net-snmp": "^1.1.14",
     "path": "^0.12.7",
     "require-all": "^1.1.0"
   },
