@@ -10,5 +10,12 @@ module.exports = {
     database : 'infologica_development',
     username : null,
     password : null
+  },
+
+  snmpConfig: {
+    ipAddress : '127.0.0.1',
+    community : 'public',
+    downloadSpeedMibs : [],
+    uploadSpeedMibs : []
   }
 };
