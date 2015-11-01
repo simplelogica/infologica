@@ -6,6 +6,9 @@ module.exports = function(app) {
       _ = require('lodash'),
       config = app.get('config');
 
+  var mongoose = require('mongoose'),
+      NetworkData  = mongoose.model('NetworkData');
+
   // Variable that contains all the task's variables and configuration
   var task = {};
 
@@ -54,7 +57,19 @@ module.exports = function(app) {
             var inputSpeed = Math.floor((inOctets - task.lastMeasure.inOctets)*8/(upTime - task.lastMeasure.upTime)),
                 outputSpeed = Math.floor((outOctets - task.lastMeasure.outOctets)*8/(upTime - task.lastMeasure.upTime));
 
-            console.log("[FetchNetworkData] Measures - Inboud = "+inputSpeed+"bps Outbound = "+outputSpeed+"bps");
+            var networkData = new NetworkData({
+              downloadRate: inputSpeed,
+              uploadRate:  outputSpeed,
+              connections:  ['test'] // TODO: get a list of IP connections.
+            });
+
+            networkData.save(function(err, networkData) {
+              if(err) {
+                console.error("[FetchNetworkData] Error saving the network data: "+err.message);
+              } else {
+                console.log("[FetchNetworkData] Measures - Inboud = "+inputSpeed+"bps Outbound = "+outputSpeed+"bps");
+              }
+            });
           }
 
           // Save this sample

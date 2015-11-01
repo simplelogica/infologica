@@ -8,8 +8,8 @@ var mongoose = require('mongoose'),
   Define the schema.
 */
 var networkDataSchema = new Schema({
-  downloadRate:    { type: String, required: true },
-  uploadRate:     { type: String, required: true },
+  downloadRate:    { type: Number, required: true },
+  uploadRate:     { type: Number, required: true },
   connections: {type: [String], required: true }
 });
 
@@ -17,4 +17,4 @@ var networkDataSchema = new Schema({
 networkDataSchema.plugin(timeStampsPlugin);
 
 
-module.exports = mongoose.model('SnmpData', networkDataSchema);
+module.exports = mongoose.model('NetworkData', networkDataSchema);
