@@ -16,5 +16,7 @@ var networkDataSchema = new Schema({
 // Add timestamps
 networkDataSchema.plugin(timeStampsPlugin);
 
+// Time-to-live of 2 hours
+networkDataSchema.index({ createdAt: 1}, {expireAfterSeconds: 7200});
 
 module.exports = mongoose.model('NetworkData', networkDataSchema);
