@@ -10,6 +10,9 @@ module.exports = function(app) {
       return name.replace(/_(.)/g, function(match) {
           return match.replace('_','').toUpperCase();
       });
+    },
+    resolve : function (Task) {
+      return new Task(app);
     }
   }));
 
@@ -18,7 +21,7 @@ module.exports = function(app) {
   // Initialize all the tasks
   for (var taskId in tasks) {
     setTimeout(function() {
-      tasks[taskId].function();
+      tasks[taskId].function(tasks[taskId]);
 
       // Repeat the task
       setTimeout(this._onTimeout, this._idleTimeout);

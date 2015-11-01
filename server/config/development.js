@@ -12,10 +12,10 @@ module.exports = {
     password : null
   },
 
-  snmpConfig: {
+  snmp: {
     ipAddress : '127.0.0.1',
     community : 'public',
-    downloadSpeedMibs : [],
-    uploadSpeedMibs : []
+    inOctetsMibs : [],
+    outOctetsMibs : []
   }
 };
