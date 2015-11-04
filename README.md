@@ -27,4 +27,4 @@ There are some endpoints when you can get:
 * `GET /api/network_data` : Fetch all the network data stored and sorted by it's creation time. There can be some query params:
   * `limit` (optional): an integer that indicates the number of results to return
   * `last` (optional): the `\_id` value of the last received element, so only newer elements would be returned.
-* `GET /api/networ_data/:id` : Retrieve an specific NetworkData element specified by it's `\_id`.
+* `GET /api/network_data/:id` : Retrieve an specific NetworkData element specified by it's `\_id`.
