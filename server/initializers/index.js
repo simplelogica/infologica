@@ -7,4 +7,5 @@ module.exports = function(app) {
   require('./database')(app);
   require('./models')(app);
   require('./controllers')(app);
+  require('./tasks')(app);
 };

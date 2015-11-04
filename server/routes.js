@@ -13,4 +13,16 @@
 module.exports = function(app) {
   var express = require("express"),
       controllers = app.get('controllers');
+
+  // NetworkData-related routes
+  var networkDataRouter = express.Router();
+
+  networkDataRouter.route('/network_data')
+    .get(controllers.networkData.index);
+
+  networkDataRouter.route('/network_data/:id')
+    .get(controllers.networkData.show);
+
+  // Attach the router
+  app.use('/api', networkDataRouter);
 };
